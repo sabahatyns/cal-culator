@@ -1,14 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Button, Switch, Text, TouchableOpacity, View } from 'react-native';
 import { useState } from 'react';
-// import { createDrawerNavigator } from 'react-navigation-drawer';
-// import {createAppContainer} from 'react-navigation';
+// import DrawerNavigator from '../components/drawer';
 
-// const appnavigator = createDrawerNavigator({
-//     Calculator:{
-//       screen: Calculator
-//     }
-//   });
 
 export default function Calculator() {
   // states
@@ -58,7 +52,7 @@ else {
         fontSize: 37,
         color: "black",
         textAlign: 'center',
-        verticalAlign: 'center',
+        verticalAlign: 'bottom',
         color: getBtnColor(type),
       }}> {title}</Text>
     </TouchableOpacity>
@@ -79,11 +73,14 @@ else {
       paddingVertical: 20,
       backgroundColor: getColor(colors.light, colors.dark),
       alignItems: 'center',
+      paddingBottom: 20,
     }}>
       <Switch value={darkTheme}
         onValueChange={() => setDarkTheme(!darkTheme)}
         thumbColor={getColor(colors.dark, colors.light)}
         trackColor={{ true: colors.light2, false: colors.dark2 }} />
+              {/* <DrawerNavigator/> */}
+
 
       {/* <Button  title='Menu' onPress={()=> this.props.navigator.openDrawer()} /> */}
       <View style={{
@@ -92,6 +89,7 @@ else {
         backgroundColor: getColor(colors.light1, colors.dark1),
         borderTopRightRadius: 20,
         borderTopLeftRadius: 20,
+        marginTop: 221,
       }}>
         <Btn title="C" type='number' />
         <Btn title="D" type='number' />
