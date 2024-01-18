@@ -38,6 +38,7 @@ import { NavigationContainer } from '@react-navigation/native';
 const Drawer = createDrawerNavigator();
 import Loc from './screens/location';
 import Calculator from './screens/calculator';
+import Icon from './screens/changeicon';
 
 export default function DrawerNavigator() {
   return (
